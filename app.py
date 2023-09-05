@@ -46,7 +46,7 @@ def rss():
     fg = FeedGenerator()
     fg.title('Feed title')
     fg.description('Feed Description')
-    fg.link(href='https://hoachbv-lab2-fna-southeastasia.azurewebsites.net/')
+    fg.link(href='https://hoachbv-lab2-lga-southeastasia.azurewebsites.net/')
     
 
     response = requests.get(settings.API_URL + '/getAdvertisements')
