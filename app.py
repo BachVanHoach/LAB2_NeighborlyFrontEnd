@@ -26,6 +26,7 @@ def feeds():
                     feed_url=request.url, url=request.url_root)
 
     response = requests.get(settings.API_URL + '/getAdvertisements')
+    print(settings.API_URL + '/getAdvertisements')
     posts = response.json()
 
     for key, value in posts.items():
