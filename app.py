@@ -53,12 +53,11 @@ def rss():
 
     response = requests.get(settings.API_URL + '/getAdvertisements')
     ads = response.json()
-    print(ads)
     for a in ads: 
         print(a)
-        fe = fg.add_entry()
-        fe.title(a.title)
-        fe.description(a.description)
+        # fe = fg.add_entry()
+        # fe.title(a.title)
+        # fe.description(a.description)
 
     response = make_response(fg.rss_str())
     response.headers.set('Content-Type', 'application/rss+xml')
