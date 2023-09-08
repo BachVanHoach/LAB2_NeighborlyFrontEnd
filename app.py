@@ -13,12 +13,9 @@ from werkzeug.contrib.atom import AtomFeed
 app = Flask(__name__)
 Bootstrap(app)
 
-
-
 def get_abs_url(url):
     """ Returns absolute url by joining post url with base url """
     return urljoin(request.url_root, url)
-
 
 @app.route('/feeds/')
 def feeds():
@@ -50,7 +47,6 @@ def rss():
     fg.description('Feed Description')
     fg.link(href='https://prod-42.southeastasia.logic.azure.com:443/workflows/aa73eab6054748858d21722cb3555743/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LDqsDfBiEoyKMef7mWoSpa5pT-zbYXebqby1NdvdvLE')
     
-
     response = requests.get(settings.API_URL + '/getAdvertisements')
     ads = response.json()
 
@@ -58,7 +54,7 @@ def rss():
     print("------------------------")
     
     for a in ads: 
-        print(a.title)
+        print(a)
         # print(a.description)
         print("------------------------") 
         # fe = fg.add_entry()
