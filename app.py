@@ -55,8 +55,8 @@ def rss():
     ads = response.json()
     for a in ads: 
         print(a)
-        # fe = fg.add_entry()
-        # fe.title(a.title)
+        fe = fg.add_entry()
+        fe.title(a.title)
         # fe.description(a.description)
 
     response = make_response(fg.rss_str())
