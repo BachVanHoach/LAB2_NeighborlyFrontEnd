@@ -53,6 +53,10 @@ def rss():
 
     response = requests.get(settings.API_URL + '/getAdvertisements')
     ads = response.json()
+
+    print(ads)
+    print("------------------------")
+    
     for a in ads: 
         print(a.title)
         # print(a.description)
