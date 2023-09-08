@@ -54,7 +54,7 @@ def rss():
     print("------------------------")
     
     for a in ads: 
-        print(a)
+        print(a.["title"])
         # print(a.description)
         print("------------------------") 
         # fe = fg.add_entry()
