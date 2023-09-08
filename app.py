@@ -52,7 +52,7 @@ def rss():
 
     print(response)
     print("------------------------")
-    print(json.loads(ads))
+    print(ads)
     print("------------------------")
     
     for a in ads: 
