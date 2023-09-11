@@ -45,7 +45,7 @@ def rss():
     fg = FeedGenerator()
     fg.title('Feed title')
     fg.description('Feed Description')
-    fg.link(href='https://prod-42.southeastasia.logic.azure.com:443/workflows/aa73eab6054748858d21722cb3555743/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LDqsDfBiEoyKMef7mWoSpa5pT-zbYXebqby1NdvdvLE')
+    fg.link(href='https://prod-93.eastus.logic.azure.com:443/workflows/1e93bd0ea3c441bf9d2f548aa2fab70f/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RHDG1NlyXS-01OQBwNQuXLN4yzCxVUoC1fuxTQvCUE8')
     
     response = requests.get(settings.API_URL + '/getAdvertisements')
     ads = response.json()
